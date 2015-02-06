@@ -1,0 +1,15 @@
+{
+  "strict": true,
+  "indent": 2,
+  "maxlen": 140,
+  "unused": true,
+  "undef": true,
+  "browser": true,
+  "node": true,
+  "jquery": true,
+  "dojo": true,
+  "devel": true,
+  "debug": true,
+  "eqnull": true,
+  "expr": true
+}
