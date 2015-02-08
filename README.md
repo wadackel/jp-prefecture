@@ -4,7 +4,7 @@ jp-prefecture  [![Build Status](https://travis-ci.org/tsuyoshiwada/jp-prefecture
 Utility library dealing with prefectures and regions in Japan.
 
 ## Version
-0.0.3
+0.0.4
 
 
 ## Install
@@ -327,8 +327,8 @@ console.log(result); // "チュウゴク"
 ```
 
 
-### regionConvert
-#### jpPrefecture.regionConvert(value, key)
+### prefConvert
+#### jpPrefecture.prefConvert(value, key)
 **value: mixed**  
 **key: string**  
 **return: mixed**
