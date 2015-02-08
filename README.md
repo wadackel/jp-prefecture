@@ -4,7 +4,7 @@ jp-prefecture  [![Build Status](https://travis-ci.org/tsuyoshiwada/jp-prefecture
 Utility library dealing with prefectures and regions in Japan.
 
 ## Version
-0.0.1
+0.0.3
 
 
 ## Install
@@ -56,19 +56,25 @@ Alias for `getAll("region")`.
 ```javascript
 var results = jpPrefecture.getAllRegion();
 console.log(results); // [Object, Object, Object ...]
+
+results = jpPrefecture.getAllRegion("name");
+console.log(results); // ["北海道", "東北", "関東", "中部", "近畿", "中国", "四国", "九州"]
 ```
 
 
 ### getAllPref
-#### jpPrefecture.getAllRegion([select])
+#### jpPrefecture.getAllPref([select])
 **select: string | array**  
 **return: array**
 
 Alias for `getAll("pref")`.
 
 ```javascript
-var results = jpPrefecture.getAllRegion();
+var results = jpPrefecture.getAllPref();
 console.log(results); // [Object, Object, Object ...]
+
+results = jpPrefecture.getAllPref("name");
+console.log(results); // ["北海道", "青森県", "岩手県", "宮城県", ...]
 ```
 
 

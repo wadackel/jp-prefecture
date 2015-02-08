@@ -1,14 +1,14 @@
 /*!
  * jp-prefecture
  * Utility library dealing with prefectures and regions in Japan.
- * @version 0.0.1
+ * @version 0.0.3
  * @license MIT
  * @author tsuyoshiwada
  * @url https://github.com/tsuyoshiwada/jp-prefecture
  */;(function(){
   "use strict";
 
-  var VERSION = "0.0.1",
+  var VERSION = "0.0.3",
       jp,
       root = this,
       undefined,
