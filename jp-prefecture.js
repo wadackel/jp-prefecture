@@ -106,7 +106,7 @@
   }
 
   if( typeof define === "function" && define.amd ){
-    define("jpPrefecture", [], function(){
+    define("jp-prefecture", [], function(){
       return jpPrefecture;
     });
   }
@@ -331,7 +331,7 @@
    * @param string
    * @return mixed
    */
-  jp.regionConvert = function(type, value, key){
+  jp.regionConvert = function(value, key){
     return jp.convert(Type.REGION, value, key);
   };
 
@@ -342,7 +342,7 @@
    * @param string
    * @return mixed
    */
-  jp.prefConvert = function(type, value, key){
+  jp.prefConvert = function(value, key){
     return jp.convert(Type.PREF, value, key);
   };
 
@@ -381,7 +381,7 @@
    * @return array
    */
   jp.getPrefNeighbors = function(value, select){
-    return jp.getNeighbors(Type.PREF, key, value, select);
+    return jp.getNeighbors(Type.PREF, value, select);
   };
 
 
