@@ -4,13 +4,13 @@ jp-prefecture  [![Build Status](https://travis-ci.org/tsuyoshiwada/jp-prefecture
 Utility library dealing with prefectures and regions in Japan.
 
 ## Version
-0.0.4
+0.0.5
 
 
 ## Install
 ### Node.js
 ```
-npm instal jp-prefecture
+npm install jp-prefecture
 ```
 
 ### Require.js
@@ -138,7 +138,7 @@ console.log(result); // {id:13, region:3, name:"東京都", short:"東京", kana
 ### findBy
 #### jpPrefecture.findBy(type, key, value, [select])
 **type: string("region" or "pref")**  
-**value: string**  
+**key: string**  
 **value: mixed**  
 **select: string | array**  
 **return: object**
@@ -351,57 +351,57 @@ console.log(result); // 44
 #### jpPrefecture.getNeighbors(type, value, [select])
 **type: string("region" or "pref")**  
 **value: mixed**  
-**select: string**  
+**select: string | array**  
 **return: array**
 
 Get the ones that are adjacent to a given region or province.
 
 ```javascript
-var result = jpPrefecture.getNeighbors("region", "関東");
-console.log(result); // [Object, Object]
+var results = jpPrefecture.getNeighbors("region", "関東");
+console.log(results); // [Object, Object]
 
-result = jpPrefecture.getNeighbors("region", "関東", "name");
-console.log(result); // ["東北", "中部"]
+results = jpPrefecture.getNeighbors("region", "関東", "name");
+console.log(results); // ["東北", "中部"]
 
-result = jpPrefecture.getNeighbors("pref", "東京都", "en");
-console.log(result); // ["saitama", "chiba", "kanagawa", "yamanashi"]
+results = jpPrefecture.getNeighbors("pref", "東京都", "en");
+console.log(results); // ["saitama", "chiba", "kanagawa", "yamanashi"]
 
-result = jpPrefecture.getNeighbors("pref", "hoge", "fuga");
-console.log(result); // undefined
+results = jpPrefecture.getNeighbors("pref", "hoge", "fuga");
+console.log(results); // undefined
 ```
 
 
 ### getRegionNeighbors
 #### jpPrefecture.getRegionNeighbors(value, [select])
 **value: mixed**  
-**select: string**  
+**select: string | array**  
 **return: array**
 
 Alias for `getNeighbors("region")`.
 
 ```javascript
-var result = jpPrefecture.getRegionNeighbors("関東");
-console.log(result); // [Object, Object]
+var results = jpPrefecture.getRegionNeighbors("関東");
+console.log(results); // [Object, Object]
 
-result = jpPrefecture.getRegionNeighbors("関東", "name");
-console.log(result); // ["東北", "中部"]
+results = jpPrefecture.getRegionNeighbors("関東", "name");
+console.log(results); // ["東北", "中部"]
 ```
 
 
 ### getPrefNeighbors
 #### jpPrefecture.getPrefNeighbors(value, [select])
 **value: mixed**  
-**select: string**  
+**select: string | array**  
 **return: array**
 
 Alias for `getNeighbors("pref")`.
 
 ```javascript
-var result = jpPrefecture.getPrefNeighbors("東京都", "en");
-console.log(result); // ["saitama", "chiba", "kanagawa", "yamanashi"]
+var results = jpPrefecture.getPrefNeighbors("東京都", "en");
+console.log(results); // ["saitama", "chiba", "kanagawa", "yamanashi"]
 
-result = jpPrefecture.getPrefNeighbors("hoge", "fuga");
-console.log(result); // undefined
+results = jpPrefecture.getPrefNeighbors("hoge", "fuga");
+console.log(results); // undefined
 ```
 
 
