@@ -1,6 +1,6 @@
 {
   "name": "jp-prefecture",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Utility library dealing with prefectures and regions in Japan.",
   "keywords": [
     "util",
@@ -24,7 +24,7 @@
     "url": "https://github.com/tsuyoshiwada/jp-prefecture/issues"
   },
   "scripts": {
-    "test": "node_modules/gulp-mocha/node_modules/mocha/bin/mocha -R spec"
+    "test": "gulp test"
   },
   "homepage": "https://github.com/tsuyoshiwada/jp-prefecture",
   "devDependencies": {
@@ -33,12 +33,11 @@
     "gulp-header": "^1.2.2",
     "gulp-jshint": "^1.9.2",
     "gulp-load-plugins": "^0.8.0",
-    "gulp-mocha": "^2.0.0",
     "gulp-plumber": "^0.6.6",
+    "gulp-qunit": "^1.2.1",
     "gulp-rename": "^1.2.0",
     "gulp-uglify": "^1.1.0",
-    "gulp-util": "^3.0.3",
-    "rimraf": "^2.2.8"
+    "gulp-util": "^3.0.3"
   },
   "files": [
     "jp-prefecture.js",

@@ -1,7 +1,6 @@
 # require module
 g = require "gulp"
 $ = do require "gulp-load-plugins"
-rm = require "rimraf"
 
 
 # banner setting
@@ -20,9 +19,9 @@ banner = [
 
 # path setting
 path = {
-  src: "src"
+  src: "./src"
   dest: "./"
-  test: "test"
+  test: "./test"
 }
 
 
@@ -40,9 +39,8 @@ g.task "js", ->
 
 # test
 g.task "test", ->
-  g.src path.test + "/**/*.js", {read: false}
-  .pipe $.plumber()
-  .pipe $.mocha {reporter: "spec"}
+  g.src path.test + "/index.html"
+  .pipe $.qunit()
 
 
 # watch
@@ -53,5 +51,4 @@ g.task "watch", ->
 
 # tasks
 g.task "default", ["watch"]
-g.task "make", ["test:make"]
 g.task "build", ["js", "test"]

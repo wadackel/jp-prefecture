@@ -5,7 +5,7 @@ Utility library dealing with prefectures and regions in Japan.
 
 
 ## Version
-0.0.6
+0.0.7
 
 
 ## Install
@@ -645,8 +645,17 @@ Id prefectures correspond to those integer the region code of ISO.
 ```
 
 
+## Browser Support
+
+* IE6 +
+* Chrome
+* Firefox
+* Safari
+
+
 ## Change Log
 
+* Change Testing framework. `QUnit` from `mocha`.
 * Support Bower Install.
 * First Release.
 

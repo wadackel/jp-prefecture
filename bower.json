@@ -1,7 +1,7 @@
 {
   "name": "jp-prefecture",
   "main": "jp-prefecture.js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "homepage": "https://github.com/tsuyoshiwada/jp-prefecture",
   "authors": [
     "tsuyoshiwada"
@@ -22,7 +22,6 @@
     ".gitignore",
     ".jshintrc",
     ".travis.yml",
-    "bower.json",
     "package.json",
     "gulpfile.coffee",
     "node_modules",
