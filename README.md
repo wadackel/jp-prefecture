@@ -644,9 +644,12 @@ Id prefectures correspond to those integer the region code of ISO.
 ]
 ```
 
+
 ## Change Log
 
+* Support Bower Install.
 * First Release.
+
 
 ## License
 Released under the [MIT Licence](https://github.com/tsuyoshiwada/jp-prefecture/blob/master/LICENSE)
