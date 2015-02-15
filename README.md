@@ -1,24 +1,38 @@
 jp-prefecture  [![Build Status](https://travis-ci.org/tsuyoshiwada/jp-prefecture.svg)](https://travis-ci.org/tsuyoshiwada/jp-prefecture)
-=====
+===============
 
 Utility library dealing with prefectures and regions in Japan.
 
+
 ## Version
-0.0.5
+0.0.6
 
 
 ## Install
+
 ### Node.js
+
 ```
 npm install jp-prefecture
 ```
 
+
 ### Require.js
+
 ```javascript
 require(["jp-prefecture"], ...
 ```
 
+
+### Bower
+
+```
+bower install jp-prefecture
+```
+
+
 ### Simple
+
 ```html
 <script type="text/javascript" src="jp-prefecture.js"></script>
 ```
