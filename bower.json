@@ -1,0 +1,32 @@
+{
+  "name": "jp-prefecture",
+  "main": "jp-prefecture.js",
+  "version": "0.0.6",
+  "homepage": "https://github.com/tsuyoshiwada/jp-prefecture",
+  "authors": [
+    "tsuyoshiwada"
+  ],
+  "description": "Utility library dealing with prefectures and regions in Japan.",
+  "keywords": [
+    "util",
+    "prefectures",
+    "japan",
+    "server",
+    "client",
+    "browser"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    ".DS_Store",
+    ".gitignore",
+    ".jshintrc",
+    ".travis.yml",
+    "package.json",
+    "gulpfile.coffee",
+    "node_modules",
+    "bower_components",
+    "src"
+    "test"
+  ]
+}
