@@ -6,6 +6,7 @@
   "authors": [
     "tsuyoshiwada"
   ],
+  "main": "jp-prefecture.js",
   "description": "Utility library dealing with prefectures and regions in Japan.",
   "keywords": [
     "util",
