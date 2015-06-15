@@ -1,6 +1,6 @@
 {
   "name": "jp-prefecture",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Utility library dealing with prefectures and regions in Japan.",
   "keywords": [
     "util",
@@ -17,7 +17,7 @@
   "main": "jp-prefecture.js",
   "author": {
     "name": "tsuyoshiwada",
-    "url": "http://webdesign-dackel.com/"
+    "url": "https://github.com/tsuyoshiwada"
   },
   "license": "MIT",
   "bugs": {

@@ -1,37 +1,36 @@
-jp-prefecture  [![Build Status](https://travis-ci.org/tsuyoshiwada/jp-prefecture.svg)](https://travis-ci.org/tsuyoshiwada/jp-prefecture)
-===============
+jp-prefecture
+=============
+
+[![npm version](https://badge.fury.io/js/jp-prefecture.svg)](http://badge.fury.io/js/jp-prefecture)
+[![Build Status](https://travis-ci.org/tsuyoshiwada/jp-prefecture.svg)](https://travis-ci.org/tsuyoshiwada/jp-prefecture)
 
 Utility library dealing with prefectures and regions in Japan.
 
 
-## Version
-0.0.7
-
-
 ## Install
 
-### Node.js
+### NPM
 
 ```
-npm install jp-prefecture
-```
-
-
-### Require.js
-
-```javascript
-require(["jp-prefecture"], ...
+$ npm install jp-prefecture
 ```
 
 
 ### Bower
 
 ```
-bower install jp-prefecture
+$ bower install jp-prefecture
 ```
 
 
-### Simple
+### CommonJS
+
+```javascript
+require("jp-prefecture")
+```
+
+
+### Basic
 
 ```html
 <script type="text/javascript" src="jp-prefecture.js"></script>
@@ -347,7 +346,7 @@ console.log(result); // "チュウゴク"
 **key: string**  
 **return: mixed**
 
-Alias for `convert("region")`.
+Alias for `convert("pref")`.
 
 ```javascript
 var result = jpPrefecture.prefConvert("ヒョウゴ", "name");
@@ -466,7 +465,7 @@ console.log(result); // false
 **val2: mixed**  
 **return: boolean**
 
-Alias for `isNeighbor("region")`.
+Alias for `isNeighbor("pref")`.
 
 ```javascript
 var result = jpPrefecture.isPrefNeighbor("山形", "fukushima");
