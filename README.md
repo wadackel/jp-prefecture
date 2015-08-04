@@ -1,8 +1,9 @@
 jp-prefecture
 =============
 
-[![npm version](https://badge.fury.io/js/jp-prefecture.svg)](http://badge.fury.io/js/jp-prefecture)
-[![Build Status](https://travis-ci.org/tsuyoshiwada/jp-prefecture.svg)](https://travis-ci.org/tsuyoshiwada/jp-prefecture)
+[![Travis](https://img.shields.io/travis/tsuyoshiwada/jp-prefecture.svg?style=flat-square)](https://travis-ci.org/tsuyoshiwada/jp-prefecture)
+[![npm](https://img.shields.io/npm/v/jp-prefecture.svg?style=flat-square)](https://www.npmjs.com/package/jp-prefecture)
+[![Bower](https://img.shields.io/bower/v/jp-prefecture.svg?style=flat-square)](http://bower.io/search/?q=jp-prefecture)
 
 Utility library dealing with prefectures and regions in Japan.
 
@@ -183,7 +184,7 @@ console.log(result); // undefined
 **select: string | array**  
 **return: object**
 
-Alias for `regionFindBy("region")`.
+Alias for `findBy("region")`.
 
 ```javascript
 var result = jpPrefecture.regionFindBy("id", 8);
@@ -198,7 +199,7 @@ console.log(result); // {id:8, name:"九州", kana:"キュウシュウ", en:"kyu
 **select: string | array**  
 **return: object**
 
-Alias for `prefFindBy("region")`.
+Alias for `findBy("region")`.
 
 ```javascript
 var result = jpPrefecture.prefFindBy("id", 8);
