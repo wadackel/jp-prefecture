@@ -1,6 +1,6 @@
 {
   "name": "jp-prefecture",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Utility library dealing with prefectures and regions in Japan.",
   "keywords": [
     "util",

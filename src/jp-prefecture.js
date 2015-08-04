@@ -1,7 +1,7 @@
 ;(function(){
   "use strict";
 
-  var VERSION = "0.0.8",
+  var VERSION = "0.0.9",
       jp,
       root = this,
       undefined,
@@ -504,7 +504,7 @@
   }
 
   function each(obj, iterate, context){
-    if( obj === null ) return obj;
+    if( obj == null ) return obj;
     context = context || obj;
     if( isObject(obj) ){
       for( var key in obj ){
@@ -520,7 +520,7 @@
   }
 
   function map(obj, iterate, context){
-    if( obj === null ) return [];
+    if( obj == null ) return [];
     var results = [], val;
     each(obj, function(d, i){
       val = iterate.call(context, d, i);
@@ -543,7 +543,7 @@
   }
 
   function some(obj, predicate){
-    if( obj === null ) return false;
+    if( obj == null ) return false;
     var k = !isArray(obj) && keys(obj),
         l = ( k || obj ).length,
         i, current;
@@ -555,7 +555,7 @@
   }
 
   function contains(obj, value, from){
-    if( obj === null ) return false;
+    if( obj == null ) return false;
     if( !isArray(obj) ) obj = values(obj);
     return indexOf(obj, value, from) >= 0;
   }
@@ -564,7 +564,7 @@
     var p = pairs(attrs), l = p.length, i, pair, key;
     return function(obj){
       if( p.length === 0 ) return false;
-      if( obj === null ) return !l;
+      if( obj == null ) return !l;
       obj = new Object(obj);
       for( i = 0; i < l; i++ ){
         pair = p[i];
@@ -585,7 +585,7 @@
 
   function filter(obj, predicate){
     var results = [];
-    if( obj === null ) return results;
+    if( obj == null ) return results;
     each(obj, function(d, i){
       if( predicate(d, i) ) results.push(d);
     });
@@ -595,13 +595,13 @@
   function pluck(obj, key){
     var results = [], _isArray, o;
 
-    if( obj === null ) return results;
+    if( obj == null ) return results;
     _isArray = isArray(obj);
     obj = _isArray ? obj : [obj];
 
     if( is("String", key) ){
       results = map(obj, function(d){
-        return d === null ? undefined : d[key];
+        return d == null ? undefined : d[key];
       });
     }else if( isArray(key) ){
       results = map(obj, function(d){
