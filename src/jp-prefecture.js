@@ -1,7 +1,7 @@
 ;(function(){
   "use strict";
 
-  var VERSION = "0.0.9",
+  var VERSION = "0.1.0",
       jp,
       root = this,
       undefined,
