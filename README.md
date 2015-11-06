@@ -53,10 +53,10 @@ var results = jpPrefecture.getAll("region");
 console.log(results); // [Object, Object, Object ...]
 
 results = jpPrefecture.getAll("pref", "name");
-console.log(results); // ["北海道", "青森県", "岩手県", ...] 
+console.log(results); // ["北海道", "青森県", "岩手県", ...]
 
 results = jpPrefecture.getAll("pref", ["id", "name"]);
-console.log(results); // [{id:1, name:"北海道"}, {id:2, name:"青森県"}, ...] 
+console.log(results); // [{id:1, name:"北海道"}, {id:2, name:"青森県"}, ...]
 ```
 
 
@@ -199,7 +199,7 @@ console.log(result); // {id:8, name:"九州", kana:"キュウシュウ", en:"kyu
 **select: string | array**  
 **return: object**
 
-Alias for `findBy("region")`.
+Alias for `findBy("pref")`.
 
 ```javascript
 var result = jpPrefecture.prefFindBy("id", 8);
@@ -534,7 +534,7 @@ console.log(result); // 5
 
 ### getAllRegionInPref
 #### jpPrefecture.getAllRegionInPref()
-**return: integer**
+**return: array**
 
 Get a list of state that contains the prefectures corresponding to the region in the multidimensional array.  
 This is useful when the loop of the list was based on the regional.
@@ -658,10 +658,6 @@ Id prefectures correspond to those integer the region code of ISO.
 * Change Testing framework. `QUnit` from `mocha`.
 * Support Bower Install.
 * First Release.
-
-
-## License
-Released under the [MIT Licence](https://github.com/tsuyoshiwada/jp-prefecture/blob/master/LICENSE)
 
 
 ## Author
