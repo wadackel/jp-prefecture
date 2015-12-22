@@ -24,6 +24,8 @@
     "url": "https://github.com/tsuyoshiwada/jp-prefecture/issues"
   },
   "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
     "test": "gulp test"
   },
   "homepage": "https://github.com/tsuyoshiwada/jp-prefecture",
