@@ -1,0 +1,17 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "quotes": ["error", "double"],
+    "indent": ["error", 2],
+    "max-len": ["error", 140],
+    "no-unused-vars": "error",
+    "no-undef": "error"
+  },
+  "globals": {
+    "define": true
+  }
+}
