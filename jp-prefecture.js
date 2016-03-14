@@ -23,7 +23,7 @@
     PREF  : "pref"
   };
 
-  // 区分は八地方区分を採用
+  // Classification is adopted eight regional division
   var regions = [
     {id:1, name:"北海道", kana:"ホッカイドウ", en:"hokkaido", neighbor:[2]},
     {id:2, name:"東北",   kana:"トウホク",     en:"tohoku",   neighbor:[1]},
@@ -35,8 +35,8 @@
     {id:8, name:"九州",   kana:"キュウシュウ", en:"kyusyu",   neighbor:[6, 7]}
   ];
 
-  // 参照: http://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E3%81%AE%E5%9C%B0%E5%9F%9F
-  // `neigbor`には海上隣接も含みます
+  // See: http://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E3%81%AE%E5%9C%B0%E5%9F%9F
+  // Also it includes the sea adjacent to the neighbor
   var prefectures = [
     {id:1,  region:1, name:"北海道",   short:"北海道", kana:"ホッカイドウ", en:"hokkaido",  neighbor:[2]},
     {id:2,  region:2, name:"青森県",   short:"青森",   kana:"アオモリ",     en:"aomori",    neighbor:[1, 3, 5]},
@@ -100,7 +100,7 @@
   jp.VERSION = VERSION;
 
 
-  // 指定したタイプから配列を返す
+  // Return an array from the specified type
   function getList(type){
     if( type === Type.REGION ) return clone(regions);
     else if( type === Type.PREF ) return clone(prefectures);
@@ -109,10 +109,10 @@
 
 
   /**
-   * 全ての地域、または都道府県を取得
-   * @param string
-   * @param string | array
-   * @return array
+   * Get all regions or prefectures.
+   * @param {String}
+   * @param {String | Array}
+   * @return {Array}
    */
   jp.getAll = function(type, select){
     var list = getList(type);
@@ -122,9 +122,9 @@
 
 
   /**
-   * 全ての地域を取得
-   * @param string | array
-   * @return array
+   * Alias for getAll("region").
+   * @param {String | Array}
+   * @return {Array}
    */
   jp.getAllRegion = function(select){
     return jp.getAll(Type.REGION, select);
@@ -132,9 +132,9 @@
 
 
   /**
-   * 全ての都道府県を取得
-   * @param string | array
-   * @return array
+   * Alias for getAll("pref").
+   * @param {String | Array}
+   * @return {Array}
    */
   jp.getAllPref = function(select){
     return jp.getAll(Type.PREF, select);
@@ -142,11 +142,11 @@
 
 
   /**
-   * 地域または都道府県を取得
-   * @param string
-   * @param object | mixed
-   * @param string | array
-   * @return object | mixed
+   * Get the single object of regional or prefectures.
+   * @param {String}
+   * @param {Object | Any}
+   * @param {String | Array}
+   * @return {Object | Any}
    */
   jp.find = function(type, value, select){
     var list = getList(type), result;
@@ -163,10 +163,10 @@
 
 
   /**
-   * 地域を取得
-   * @param object | mixed
-   * @param string | array
-   * @return object | mixed
+   * CGet the single object of regional. Alias for find("region").
+   * @param {Object | Any}
+   * @param {String | Array}
+   * @return {Object | Any}
    */
   jp.regionFind = function(value, select){
     return jp.find(Type.REGION, value, select);
@@ -174,10 +174,10 @@
 
 
   /**
-   * 都道府県を取得
-   * @param object | mixed
-   * @param string | array
-   * @return object | mixed
+   * Get the single object of prefectures. Alias for find("pref").
+   * @param {Object | Any}
+   * @param {String | Array}
+   * @return {Object | Any}
    */
   jp.prefFind = function(value, select){
     return jp.find(Type.PREF, value, select);
@@ -185,12 +185,12 @@
 
 
   /**
-   * 地域または都道府県を、指定したキーと値から取得
-   * @param string
-   * @param string
-   * @param string | integer
-   * @param string | array
-   * @return object | mixed
+   * By specifying the key and value, to get a single object of regional.
+   * @param {String}
+   * @param {String}
+   * @param {String | Integer}
+   * @param {String | Array}
+   * @return {Object | Any}
    */
   jp.findBy = function(type, key, value, select){
     var obj = {};
@@ -200,11 +200,11 @@
 
 
   /**
-   * 地域または都道府県をIDから取得
-   * @param string
-   * @param mixed
-   * @param string | array
-   * @return object | mixed
+   * Alias for findBy("region").
+   * @param {String}
+   * @param {Any}
+   * @param {String | Array}
+   * @return {Object | Any}
    */
   jp.regionFindBy = function(key, value, select){
     return jp.findBy(Type.REGION, key, value, select);
@@ -212,11 +212,11 @@
 
 
   /**
-   * 地域または都道府県をIDから取得
-   * @param string
-   * @param mixed
-   * @param string | array
-   * @return object | mixed
+   * Alias for findBy("pref").
+   * @param {String}
+   * @param {Any}
+   * @param {String | Array}
+   * @return {Object | Any}
    */
   jp.prefFindBy = function(key, value, select){
     return jp.findBy(Type.PREF, key, value, select);
@@ -224,10 +224,10 @@
 
 
   /**
-   * 都道府県から該当する地域を取得
-   * @param mixed
-   * @param string | array
-   * @return obj | mixed
+   * Get the region corresponding from prefectures.
+   * @param {Any}
+   * @param {String | Array}
+   * @return {Object | Any}
    */
   jp.regionFindByPref = function(value, select){
     var pref = jp.prefFind(value);
@@ -237,10 +237,10 @@
 
 
   /**
-   * 地域から該当する都道府県一覧を取得
-   * @param mixed
-   * @param string | array
-   * @return array
+   * Get the prefectures corresponding from region.
+   * @param {Any}
+   * @param {String | Array}
+   * @return {Array}
    */
   jp.prefFindByRegion = function(value, select){
     var region = jp.regionFind(value), results;
@@ -253,11 +253,12 @@
 
 
   /**
-   * 指定した条件に当てはまる地域または都道府県を取得
-   * @param string
-   * @param object
-   * @param string | array
-   * @return array
+   * Get the regional or province apply to the given conditions.
+   * The return value is returned always an array.
+   * @param {String}
+   * @param {Object}
+   * @param {String | Array}
+   * @return {Array}
    */
   jp.where = function(type, attrs, select){
     var results = where(getList(type), attrs);
@@ -266,10 +267,10 @@
 
 
   /**
-   * 指定した条件に当てはまる地域を取得
-   * @param object
-   * @param string | array
-   * @return array
+   * Alias for where("region").
+   * @param {Object}
+   * @param {String | Array}
+   * @return {Array}
    */
   jp.regionWhere = function(attrs, select){
     return jp.where(Type.REGION, attrs, select);
@@ -277,10 +278,10 @@
 
 
   /**
-   * 指定した条件に当てはまる都道府県を取得
-   * @param object
-   * @param string | array
-   * @return array
+   * Alias for where("pref").
+   * @param {Object}
+   * @param {String | Array}
+   * @return {Array}
    */
   jp.prefWhere = function(attrs, select){
     return jp.where(Type.PREF, attrs, select);
@@ -288,11 +289,11 @@
 
 
   /**
-   * 地域または都道府県の指定した値から別のキーへ変換
-   * @param string
-   * @param mixed
-   * @param string
-   * @return mixed
+   * Conversion from the specified value of the region or province to another key.
+   * @param {String}
+   * @param {Any}
+   * @param {String}
+   * @return {Any}
    */
   jp.convert = function(type, value, key){
     if( isArray(key) ){
@@ -304,10 +305,10 @@
 
 
   /**
-   * 地域の指定した値から別のキーへ変換
-   * @param mixed
-   * @param string
-   * @return mixed
+   * Alias for convert("region").
+   * @param {Any}
+   * @param {String}
+   * @return {Any}
    */
   jp.regionConvert = function(value, key){
     return jp.convert(Type.REGION, value, key);
@@ -315,10 +316,10 @@
 
 
   /**
-   * 都道府県の指定した値から別のキーへ変換
-   * @param mixed
-   * @param string
-   * @return mixed
+   * Alias for convert("pref").
+   * @param {Any}
+   * @param {String}
+   * @return {Any}
    */
   jp.prefConvert = function(value, key){
     return jp.convert(Type.PREF, value, key);
@@ -326,11 +327,11 @@
 
 
   /**
-   * 指定した地域、または都道府県に隣接しているものを取得
-   * @param string
-   * @param mixed
-   * @param string | array
-   * @return array
+   * Get the ones that are adjacent to a given region or province.
+   * @param {String}
+   * @param {Any}
+   * @param {String | Array}
+   * @return {Array}
    */
   jp.getNeighbors = function(type, value, select){
     var result = jp.find(type, value);
@@ -342,10 +343,10 @@
 
 
   /**
-   * 指定した地域に隣接した地域を取得
-   * @param mixed
-   * @param string | array
-   * @return array
+   * Alias for getNeighbors("region").
+   * @param {Any}
+   * @param {String | Array}
+   * @return {Array}
    */
   jp.getRegionNeighbors = function(value, select){
     return jp.getNeighbors(Type.REGION, value, select);
@@ -353,10 +354,10 @@
 
 
   /**
-   * 指定した地域に隣接した地域を取得
-   * @param mixed
-   * @param string | array
-   * @return array
+   * Alias for getNeighbors("pref").
+   * @param {Any}
+   * @param {String | Array}
+   * @return {Array}
    */
   jp.getPrefNeighbors = function(value, select){
     return jp.getNeighbors(Type.PREF, value, select);
@@ -364,11 +365,11 @@
 
 
   /**
-   * 指定した2つの地域または都道府県が隣接しているか判定
-   * @param string
-   * @param mixed
-   * @param mixed
-   * @return boolean
+   * Determine if the specified two regions or prefectures were are adjacent.
+   * @param {String}
+   * @param {Any}
+   * @param {Any}
+   * @return {Boolean}
    */
   jp.isNeighbor = function(type, val1, val2){
     var obj1 = jp.find(type, val1);
@@ -379,10 +380,10 @@
 
 
   /**
-   * 指定した2つの地域が隣接しているか判定
-   * @param mixed
-   * @param mixed
-   * @return boolean
+   * Alias for isNeighbor("region").
+   * @param {Any}
+   * @param {Any}
+   * @return {Boolean}
    */
   jp.isRegionNeighbor = function(val1, val2){
     return jp.isNeighbor(Type.REGION, val1, val2);
@@ -390,10 +391,10 @@
 
 
   /**
-   * 指定した2つの都道府県が隣接しているか判定
-   * @param mixed
-   * @param mixed
-   * @return boolean
+   * Alias for isNeighbor("pref").
+   * @param {Any}
+   * @param {Any}
+   * @return {Boolean}
    */
   jp.isPrefNeighbor = function(val1, val2){
     return jp.isNeighbor(Type.PREF, val1, val2);
@@ -401,10 +402,10 @@
 
 
   /**
-   * 指定した地域または都道府県の隣接数を取得
-   * @param string
-   * @param mixed
-   * @return integer
+   * Get the number of adjacent of the specified region.
+   * @param {String}
+   * @param {Any}
+   * @return {Integer}
    */
   jp.neighborSize = function(type, value){
     var result = jp.find(type, value);
@@ -413,9 +414,9 @@
 
 
   /**
-   * 指定した地域の隣接数を取得
-   * @param mixed
-   * @return integer
+   * Alias for neighborSize("region").
+   * @param {Any}
+   * @return {Integer}
    */
   jp.regionNeighborSize = function(value){
     return jp.neighborSize(Type.REGION, value);
@@ -423,9 +424,9 @@
 
 
   /**
-   * 指定した都道府県の隣接数を取得
-   * @param mixed
-   * @return integer
+   * Alias for neighborSize("pref").
+   * @param {Any}
+   * @return {Integer}
    */
   jp.prefNeighborSize = function(value){
     return jp.neighborSize(Type.PREF, value);
@@ -433,8 +434,9 @@
 
 
   /**
-   * 地域に対応する都道府県が入った状態の一覧を多次元配列で取得
-   * @return array
+   * Get a list of state that contains the prefectures corresponding to the region in the multidimensional array.
+   * This is useful when the loop of the list was based on the regional.
+   * @return {Array}
    */
   jp.getAllRegionInPref = function(){
     var results = [];
@@ -446,8 +448,6 @@
     });
     return results;
   };
-
-
 
 
   /**
