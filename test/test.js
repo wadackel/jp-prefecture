@@ -1,5 +1,13 @@
-var jp = jpPrefecture;
+if (typeof QUnit === "undefined") {
+  QUnit = require("qunit-cli");
+}
 
+if (typeof exports === "object" && typeof module !== "undefined") {
+  jpPrefecture = require("../");
+}
+
+
+var jp = jpPrefecture;
 
 
 QUnit.module("#getAll()");

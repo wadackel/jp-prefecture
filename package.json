@@ -24,22 +24,20 @@
     "url": "https://github.com/tsuyoshiwada/jp-prefecture/issues"
   },
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build",
-    "test": "gulp test"
+    "start": "npm run lint:watch",
+    "build": "npm run uglify",
+    "uglify": "uglifyjs jp-prefecture.js -o jp-prefecture.min.js -c -v --comments",
+    "test": "npm run lint && npm run qunit",
+    "lint": "eslint jp-prefecture.js",
+    "lint:watch": "onchange 'jp-prefecture.js' -- npm run lint",
+    "qunit": "qunit-cli -c ./ test/test.js"
   },
   "homepage": "https://github.com/tsuyoshiwada/jp-prefecture",
   "devDependencies": {
-    "coffee-script": "^1.9.0",
-    "gulp": "^3.8.10",
-    "gulp-header": "^1.2.2",
-    "gulp-jshint": "^1.9.2",
-    "gulp-load-plugins": "^0.8.0",
-    "gulp-plumber": "^0.6.6",
-    "gulp-qunit": "^1.2.1",
-    "gulp-rename": "^1.2.0",
-    "gulp-uglify": "^1.1.0",
-    "gulp-util": "^3.0.3"
+    "eslint": "^2.4.0",
+    "onchange": "^2.1.2",
+    "qunit-cli": "^0.2.0",
+    "uglify-js": "^2.6.2"
   },
   "files": [
     "jp-prefecture.js",
