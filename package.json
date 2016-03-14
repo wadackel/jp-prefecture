@@ -25,10 +25,12 @@
   },
   "scripts": {
     "start": "npm run lint:watch",
+    "build": "npm run uglify",
+    "uglify": "uglifyjs jp-prefecture.js -o jp-prefecture.min.js -c -v --comments",
+    "test": "npm run lint && npm run qunit",
     "lint": "eslint jp-prefecture.js",
     "lint:watch": "onchange 'jp-prefecture.js' -- npm run lint",
-    "build": "gulp build",
-    "test": "gulp test"
+    "qunit": "qunit-cli -c ./ test/test.js"
   },
   "homepage": "https://github.com/tsuyoshiwada/jp-prefecture",
   "devDependencies": {
