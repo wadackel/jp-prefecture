@@ -19,14 +19,13 @@
   "ignore": [
     "**/.*",
     ".DS_Store",
+    ".editorconfig",
     ".gitignore",
-    ".jshintrc",
+    ".eslintrc",
     ".travis.yml",
     "package.json",
-    "gulpfile.coffee",
     "node_modules",
     "bower_components",
-    "src",
     "test"
   ]
 }
