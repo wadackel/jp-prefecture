@@ -6,14 +6,17 @@
  * @license MIT
  * @author tsuyoshiwada
  */
-(function(){
+(function(global, factory) {
+  "use strict";
+  typeof exports === "object" && typeof module !== "undefined" ? module.exports = factory() :
+  typeof define === "function" && define.amd ? define(factory) :
+  global.jpPrefecture = factory();
+}(this, function() {
   "use strict";
 
   var VERSION = "0.1.0";
   var jp;
-  var root = this;
   var undefined;
-  var previousJpPrefecture = root.jpPrefecture;
 
   var Type = {
     REGION: "region",
@@ -96,22 +99,6 @@
   // Current Version
   jp.VERSION = VERSION;
 
-  // setting module
-  if( typeof exports !== "undefined" ){
-    if( typeof module !== "undefined" && module.exports ){
-      exports = module.exports = jpPrefecture;
-    }
-    exports.jpPrefecture = jpPrefecture;
-  }else{
-    root.jpPrefecture = jpPrefecture;
-  }
-
-  if( typeof define === "function" && define.amd ){
-    define("jp-prefecture", [], function(){
-      return jpPrefecture;
-    });
-  }
-
 
   // 指定したタイプから配列を返す
   function getList(type){
@@ -119,16 +106,6 @@
     else if( type === Type.PREF ) return clone(prefectures);
     return undefined;
   }
-
-
-  /**
-   * 同じ名前のライブラリとの衝突を避ける
-   * @return jpPrefecture
-   */
-  jp.noConflict = function(){
-    root.jpPrefecture = previousJpPrefecture;
-    return this;
-  };
 
 
   /**
@@ -647,4 +624,5 @@
     return v;
   }
 
-}.call(this));
+  return jpPrefecture;
+}));
