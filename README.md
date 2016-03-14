@@ -55,9 +55,9 @@ jpPrefecture.__METHOD__();
 
 #### jpPrefecture.getAll(type, [select])
 
-**type: string("region" or "pref")**  
-**select: string | array**  
-**return: array**
+**type: {String}**  
+**select: {String | Array}**  
+**return: {Array}**
 
 Get all regions or prefectures.
 
@@ -77,8 +77,8 @@ console.log(results); // [{id:1, name:"北海道"}, {id:2, name:"青森県"}, ..
 
 #### jpPrefecture.getAllRegion([select])
 
-**select: string | array**  
-**return: array**
+**select: {String | Array}**  
+**return: {Array}**
 
 Alias for `getAll("region")`.
 
@@ -95,8 +95,8 @@ console.log(results); // ["北海道", "東北", "関東", "中部", "近畿", "
 
 #### jpPrefecture.getAllPref([select])
 
-**select: string | array**  
-**return: array**
+**select: {String | Array}**  
+**return: {Array}**
 
 Alias for `getAll("pref")`.
 
@@ -113,10 +113,10 @@ console.log(results); // ["北海道", "青森県", "岩手県", "宮城県", ..
 
 #### jpPrefecture.find(type, value, [select])
 
-**type: string("region" or "pref")**  
-**value: mixed**  
-**select: string | array**  
-**return: object**
+**type: {String}**  
+**value: {Any}**  
+**select: {String | Array}**  
+**return: {Object}**
 
 Get the single object of regional or prefectures.
 
@@ -142,10 +142,10 @@ console.log( result ); // undefined
 
 #### jpPrefecture.regionFind(value, [select])
 
-**type: string("region" or "pref")**  
-**value: mixed**  
-**select: string | array**  
-**return: object**
+**type: {String}**  
+**value: {Any}**  
+**select: {String | Array}**  
+**return: {Object}**
 
 Get the single object of regional. Alias for `find("region")`.
 
@@ -159,10 +159,10 @@ console.log(result); // {id:1, name:"北海道", kana:"ホッカイドウ", en:"
 
 #### jpPrefecture.prefFind(value, [select])
 
-**type: string("region" or "pref")**  
-**value: mixed**  
-**select: string | array**  
-**return: object**
+**type: {String}**  
+**value: {Any}**  
+**select: {String | Array}**  
+**return: {Object}**
 
 Get the single object of prefectures. Alias for `find("pref")`.
 
@@ -176,11 +176,11 @@ console.log(result); // {id:13, region:3, name:"東京都", short:"東京", kana
 
 #### jpPrefecture.findBy(type, key, value, [select])
 
-**type: string("region" or "pref")**  
-**key: string**  
-**value: mixed**  
-**select: string | array**  
-**return: object**
+**type: {String}**  
+**key: {String}**  
+**value: {Any}**  
+**select: {String | Array}**  
+**return: {Object}**
 
 By specifying the key and value, to get a single object of regional.
 
@@ -206,10 +206,10 @@ console.log(result); // undefined
 
 #### jpPrefecture.regionFindBy(key, value, [select])
 
-**key: string**  
-**value: mixed**  
-**select: string | array**  
-**return: object**
+**key: {String}**  
+**value: {Any}**  
+**select: {String | Array}**  
+**return: {Object}**
 
 Alias for `findBy("region")`.
 
@@ -223,10 +223,10 @@ console.log(result); // {id:8, name:"九州", kana:"キュウシュウ", en:"kyu
 
 #### jpPrefecture.prefFindBy(key, value, [select])
 
-**key: string**  
-**value: mixed**  
-**select: string | array**  
-**return: object**
+**key: {String}**  
+**value: {Any}**  
+**select: {String | Array}**  
+**return: {Object}**
 
 Alias for `findBy("pref")`.
 
@@ -240,9 +240,9 @@ console.log(result); // {id:8, region:3, name:"茨城県", short:"茨城", kana:
 
 #### jpPrefecture.regionFindByPref(value, [select])
 
-**value: mixed**  
-**select: string | array**  
-**return: object**
+**value: {Any}**  
+**select: {String | Array}**  
+**return: {Object}**
 
 Get the region corresponding from prefectures.
 
@@ -262,9 +262,9 @@ console.log(result); // undefined
 
 #### jpPrefecture.prefFindByRegion(value, [select])
 
-**value: mixed**  
-**select: string | array**  
-**return: array**
+**value: {Any}**  
+**select: {String | Array}**  
+**return: {Array}**
 
 Get the prefectures corresponding from region.
 
@@ -284,10 +284,10 @@ console.log(results); // undefined
 
 #### jpPrefecture.where(type, attrs, [select])
 
-**type: string("region" or "pref")**  
-**attrs: object**  
-**select: string | array**  
-**return: array**
+**type: {String}**  
+**attrs: {Object}**  
+**select: {String | Array}**  
+**return: {Array}**
 
 Get the regional or province apply to the given conditions.  
 The return value is returned always an array.
@@ -311,9 +311,9 @@ console.log(results); // []
 
 #### jpPrefecture.regionWhere(attrs, [select])
 
-**attrs: object**  
-**select: string | array**  
-**return: array**
+**attrs: {Object}**  
+**select: {String | Array}**  
+**return: {Array}**
 
 Alias for `where("region")`.
 
@@ -327,9 +327,9 @@ console.log(results); // [{id:1, name:"北海道", kana:"ホッカイドウ", en
 
 #### jpPrefecture.prefWhere(attrs, [select])
 
-**attrs: object**  
-**select: string | array**  
-**return: array**
+**attrs: {Object}**  
+**select: {String | Array}**  
+**return: {Array}**
 
 Alias for `where("pref")`.
 
@@ -343,10 +343,10 @@ console.log(results); // ["茨城県", "栃木県", "群馬県", "埼玉県", "�
 
 #### jpPrefecture.convert(type, value, key)
 
-**type: string("region" or "pref")**  
-**value: mixed**  
-**key: string**  
-**return: mixed**
+**type: {String}**  
+**value: {Any}**  
+**key: {String}**  
+**return: {Any}**
 
 Conversion from the specified value of the region or province to another key.
 
@@ -368,9 +368,9 @@ console.log(result); // undefined
 ### regionConvert
 
 #### jpPrefecture.regionConvert(value, key)
-**value: mixed**  
-**key: string**  
-**return: mixed**
+**value: {Any}**  
+**key: {String}**  
+**return: {Any}**
 
 Alias for `convert("region")`.
 
@@ -387,9 +387,9 @@ console.log(result); // "チュウゴク"
 
 #### jpPrefecture.prefConvert(value, key)
 
-**value: mixed**  
-**key: string**  
-**return: mixed**
+**value: {Any}**  
+**key: {String}**  
+**return: {Any}**
 
 Alias for `convert("pref")`.
 
@@ -409,10 +409,10 @@ console.log(result); // 44
 
 #### jpPrefecture.getNeighbors(type, value, [select])
 
-**type: string("region" or "pref")**  
-**value: mixed**  
-**select: string | array**  
-**return: array**
+**type: {String}**  
+**value: {Any}**  
+**select: {String | Array}**  
+**return: {Array}**
 
 Get the ones that are adjacent to a given region or province.
 
@@ -435,9 +435,9 @@ console.log(results); // undefined
 
 #### jpPrefecture.getRegionNeighbors(value, [select])
 
-**value: mixed**  
-**select: string | array**  
-**return: array**
+**value: {Any}**  
+**select: {String | Array}**  
+**return: {Array}**
 
 Alias for `getNeighbors("region")`.
 
@@ -454,9 +454,9 @@ console.log(results); // ["東北", "中部"]
 
 #### jpPrefecture.getPrefNeighbors(value, [select])
 
-**value: mixed**  
-**select: string | array**  
-**return: array**
+**value: {Any}**  
+**select: {String | Array}**  
+**return: {Array}**
 
 Alias for `getNeighbors("pref")`.
 
@@ -473,10 +473,10 @@ console.log(results); // undefined
 
 #### jpPrefecture.isNeighbor(type, val1, val2)
 
-**type: string("region" or "pref")**  
-**val1: mixed**  
-**val2: mixed**  
-**return: boolean**
+**type: {String}**  
+**val1: {Any}**  
+**val2: {Any}**  
+**return: {Boolean}**
 
 Determine if the specified two regions or prefectures were are adjacent.
 
@@ -499,9 +499,9 @@ console.log(result); // false
 
 #### jpPrefecture.isRegionNeighbor(val1, val2)
 
-**val1: mixed**  
-**val2: mixed**  
-**return: boolean**
+**val1: {Any}**  
+**val2: {Any}**  
+**return: {Boolean}**
 
 Alias for `isNeighbor("region")`.
 
@@ -518,9 +518,9 @@ console.log(result); // false
 
 #### jpPrefecture.isPrefNeighbor(val1, val2)
 
-**val1: mixed**  
-**val2: mixed**  
-**return: boolean**
+**val1: {Any}**  
+**val2: {Any}**  
+**return: {Boolean}**
 
 Alias for `isNeighbor("pref")`.
 
@@ -537,9 +537,9 @@ console.log(result); // false
 
 #### jpPrefecture.neighborSize(type, value)
 
-**type: string("region" or "pref")**  
-**value: mixed**  
-**return: integer**
+**type: {String}**  
+**value: {Any}**  
+**return: {Integer}**
 
 Get the number of adjacent of the specified region.
 
@@ -562,8 +562,8 @@ console.log(result); // 4
 
 #### jpPrefecture.regionNeighborSize(value)
 
-**value: mixed**  
-**return: integer**
+**value: {Any}**  
+**return: {Integer}**
 
 Alias for `neighborSize("region")`.
 
@@ -580,8 +580,8 @@ console.log(result); // 1
 
 #### jpPrefecture.prefNeighborSize(value)
 
-**value: mixed**  
-**return: integer**
+**value: {Any}**  
+**return: {Integer}**
 
 Alias for `neighborSize("pref")`.
 
@@ -598,7 +598,7 @@ console.log(result); // 5
 
 #### jpPrefecture.getAllRegionInPref()
 
-**return: array**
+**return: {Array}**
 
 Get a list of state that contains the prefectures corresponding to the region in the multidimensional array.  
 This is useful when the loop of the list was based on the regional.
