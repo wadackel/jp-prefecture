@@ -1,7 +1,7 @@
 {
   "name": "jp-prefecture",
   "main": "jp-prefecture.js",
-  "version": "0.0.9",
+  "version": "0.2.0",
   "homepage": "https://github.com/tsuyoshiwada/jp-prefecture",
   "authors": [
     "tsuyoshiwada"

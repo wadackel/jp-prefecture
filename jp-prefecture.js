@@ -2,7 +2,7 @@
  * jp-prefecture
  * Utility library dealing with prefectures and regions in Japan.
  *
- * @version 0.1.0
+ * @version 0.2.0
  * @license MIT
  * @author tsuyoshiwada
  */
