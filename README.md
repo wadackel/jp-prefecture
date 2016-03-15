@@ -728,4 +728,4 @@ Id prefectures correspond to those integer the region code of ISO.
 
 
 
-Bugs, feature requests and comments are more than welcome in the [issues](https://github.com/tsuyoshiwada/sequential-number/issues)
+Bugs, feature requests and comments are more than welcome in the [issues](https://github.com/tsuyoshiwada/jp-prefecture/issues)
