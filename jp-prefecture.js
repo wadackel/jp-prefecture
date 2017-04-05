@@ -2,7 +2,7 @@
  * jp-prefecture
  * Utility library dealing with prefectures and regions in Japan.
  *
- * @version 0.2.0
+ * @version 0.2.1
  * @license MIT
  * @author tsuyoshiwada
  */
@@ -14,7 +14,7 @@
 }(this, function() {
   "use strict";
 
-  var VERSION = "0.1.0";
+  var VERSION = "0.2.1";
   var jp;
   var undefined;
 
