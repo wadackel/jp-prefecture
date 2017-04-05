@@ -3,7 +3,6 @@ jp-prefecture
 
 [![Travis](https://img.shields.io/travis/tsuyoshiwada/jp-prefecture.svg?style=flat-square)](https://travis-ci.org/tsuyoshiwada/jp-prefecture)
 [![npm](https://img.shields.io/npm/v/jp-prefecture.svg?style=flat-square)](https://www.npmjs.com/package/jp-prefecture)
-[![Bower](https://img.shields.io/bower/v/jp-prefecture.svg?style=flat-square)](http://bower.io/search/?q=jp-prefecture)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/tsuyoshiwada/jp-prefecture/master/LICENSE)
 
 Utility library dealing with prefectures and regions in Japan.
@@ -26,13 +25,6 @@ jpPrefecture.__METHOD__();
 ```
 
 
-### via Bower
-
-```bash
-$ bower install jp-prefecture --save
-```
-
-
 ### via Manual
 
 1. Download the [jp-prefecture.min.js](https://raw.githubusercontent.com/tsuyoshiwada/jp-prefecture/master/jp-prefecture.min.js)
@@ -46,6 +38,15 @@ $ bower install jp-prefecture --save
 
 ```javascript
 jpPrefecture.__METHOD__();
+```
+
+
+### via Bower (deprecated)
+
+Bower is no maintenance.
+
+```bash
+$ bower install jp-prefecture --save
 ```
 
 
